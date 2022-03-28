@@ -36,8 +36,8 @@ export default function Home() {
         </section>
         <SectionTitle>Quiénes Somos</SectionTitle>
         <section className="flex flex-wrap">
-          {profilesData.map((profile, i) => (
-            <Card key={i} profile={profile} />
+          {profilesData.map((profile) => (
+            <Card key={profile.id} profile={profile} />
           ))}
         </section>
       </main>
@@ -45,7 +45,7 @@ export default function Home() {
   );
 }
 
-export const getServerSideProps = async ({ locale }: any) => ({
+export const getServerSideProps = async ({ locale }: { locale: string }) => ({
   props: {
     ...(await serverSideTranslations(locale, ["common"])),
   },
