@@ -3,6 +3,7 @@ import { useTranslation } from "next-i18next";
 import Head from "next/head";
 import SectionTitle from "../components/SectionTitle";
 import Card from "../components/Card";
+import { profilesData } from "../data/data";
 
 export default function Home() {
   const { t } = useTranslation("common");
@@ -33,9 +34,11 @@ export default function Home() {
         <section>
           <SectionTitle>Tecnologías</SectionTitle>
         </section>
-        <section>
-          <SectionTitle>Quiénes Somos</SectionTitle>
-          <Card />
+        <SectionTitle>Quiénes Somos</SectionTitle>
+        <section className="flex flex-wrap">
+          {profilesData.map((profile, i) => (
+            <Card key={i} profile={profile} />
+          ))}
         </section>
       </main>
     </>
