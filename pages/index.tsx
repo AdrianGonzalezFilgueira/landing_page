@@ -3,7 +3,7 @@ import { useTranslation } from "next-i18next";
 import Head from "next/head";
 import SectionTitle from "../components/SectionTitle";
 import Card from "../components/Card";
-import { profilesData } from "../data/data";
+import { profilesData } from "../data/profile";
 
 export default function Home() {
   const { t } = useTranslation("common");

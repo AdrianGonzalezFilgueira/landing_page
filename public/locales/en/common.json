@@ -1,3 +1,5 @@
 {
-  "index.title": "Home"
+  "index.title": "Home",
+  "project.Momentum.description": "An application designed to store and organize a collection of pictures",
+  "project.Valtua.description": "Organization's website"
 }
