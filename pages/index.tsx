@@ -4,6 +4,7 @@ import Head from "next/head";
 import SectionTitle from "../components/SectionTitle";
 import Card from "../components/Card";
 import { profilesData } from "../data/profile";
+import NavBar from "../components/NavBar";
 
 export default function Home() {
   const { t } = useTranslation("common");
@@ -13,7 +14,8 @@ export default function Home() {
         <title>Valtua</title>
         <meta name="description" content="Valtua" />
       </Head>
-      <main className="bg-slate-300 container mx-auto py-20">
+      <NavBar />
+      <main className="container mx-auto py-20">
         <section>
           <h1 className="font-bold text-cyan-400 text-xl text-center">
             {t("index.title")}
