@@ -1,5 +1,4 @@
 {
-  "index.title": "Inicio",
-  "project.Momentum.description": "Aplicación destinada a almacenar y ordenar una colección de fotografías",
-  "project.Valtua.description": "Página web de la organización"
+  "project.momentum.description": "Aplicación destinada a almacenar y ordenar una colección de fotografías",
+  "project.valtua.description": "Página web de la organización"
 }

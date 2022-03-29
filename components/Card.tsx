@@ -6,7 +6,7 @@ import { Profile } from "../interfaces/Profile";
 
 export default function Card({ profile }: { profile: Profile }) {
   return (
-    <article className="bg-glass flex flex-col mx-auto p-8 w-[20rem]">
+    <article className="bg-glass flex flex-col mx-auto p-8">
       <header className="flex justify-center py-8">
         <Image
           className="rounded-full"

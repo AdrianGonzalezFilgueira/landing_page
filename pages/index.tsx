@@ -8,6 +8,7 @@ import NavBar from "../components/NavBar";
 
 export default function Home() {
   const { t } = useTranslation("common");
+
   return (
     <>
       <Head>
@@ -16,32 +17,21 @@ export default function Home() {
       </Head>
       <NavBar />
       <main className="container mx-auto py-20">
-        <section>
-          <h1 className="font-bold text-cyan-400 text-xl text-center">
-            {t("index.title")}
-          </h1>
-        </section>
-        <section id="info">
-          <SectionTitle>Sobre Valtua</SectionTitle>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque
-            alias quas perferendis. Nisi quo veniam quaerat. Blanditiis a nemo
-            fugit ea saepe earum deleniti ratione esse sapiente iusto, facilis
-            laboriosam.
-          </p>
-        </section>
-        <section id="projects">
-          <SectionTitle>Proyectos</SectionTitle>
-        </section>
-        <section>
-          <SectionTitle>Tecnologías</SectionTitle>
-        </section>
-        <SectionTitle>Quiénes Somos</SectionTitle>
+        <SectionTitle>{t("section.about")}</SectionTitle>
+        <section id="about"></section>
+
+        <SectionTitle>{t("section.projects")}</SectionTitle>
+        <section id="projects"></section>
+
+        <SectionTitle>{t("section.team")}</SectionTitle>
         <section id="team" className="flex flex-wrap">
           {profilesData.map((profile) => (
             <Card key={profile.id} profile={profile} />
           ))}
         </section>
+
+        <SectionTitle>{t("section.contact")}</SectionTitle>
+        <section id="contact"></section>
       </main>
     </>
   );

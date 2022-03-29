@@ -1,10 +1,10 @@
 import { Project } from "../interfaces/Project";
 
-export const projectData: Project[] = [
+export const projectsData: Project[] = [
   {
     id: 1,
     name: "Validame",
-    description: "",
+    description: "projects.validame.description",
     image: "https://via.placeholder.com/100",
     website: "",
     github: "",
@@ -13,7 +13,7 @@ export const projectData: Project[] = [
   {
     id: 2,
     name: "Momentum",
-    description: "",
+    description: "projects.momentum.description",
     image: "https://via.placeholder.com/100",
     website: "",
     github: "",
@@ -22,7 +22,7 @@ export const projectData: Project[] = [
   {
     id: 3,
     name: "Valtua",
-    description: "",
+    description: "projects.valtua.description",
     image: "https://via.placeholder.com/100",
     website: "",
     github: "",
