@@ -21,7 +21,7 @@ export default function Home() {
             {t("index.title")}
           </h1>
         </section>
-        <section>
+        <section id="info">
           <SectionTitle>Sobre Valtua</SectionTitle>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque
@@ -30,14 +30,14 @@ export default function Home() {
             laboriosam.
           </p>
         </section>
-        <section>
+        <section id="projects">
           <SectionTitle>Proyectos</SectionTitle>
         </section>
         <section>
           <SectionTitle>Tecnologías</SectionTitle>
         </section>
         <SectionTitle>Quiénes Somos</SectionTitle>
-        <section className="flex flex-wrap">
+        <section id="team" className="flex flex-wrap">
           {profilesData.map((profile) => (
             <Card key={profile.id} profile={profile} />
           ))}

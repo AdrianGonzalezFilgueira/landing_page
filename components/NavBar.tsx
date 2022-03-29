@@ -1,23 +1,25 @@
 export default function NavBar() {
     return (
-      <header className="flex justify-center">
-          <nav className="flex space-x-40">
-                  <a>
-                    nosotros
-                  </a>
-                  <a>
-                    proyectos
-                  </a>
-              <div>
-                  <h1 className="text-4xl">VALTUA</h1>
-              </div>
-                  <a>
-                    equipo
-                  </a>
-                  <a>
-                    contacto
-                  </a>
-          </nav>
+        <header className="mx-auto container">
+        <nav className="">
+          <ul className="flex items-center text-center">
+            <li className="w-1/5">
+              <a href="#info">nosotros</a>
+            </li>
+            <li className="w-1/5">
+              <a href="#projects">proyectos</a>
+            </li>
+            <li className="w-1/5">
+              <h1 className="text-4xl">VALTUA</h1>
+            </li>
+            <li className="w-1/5">
+              <a href="#team">equipo</a>
+            </li>
+            <li className="w-1/5">
+              <a>contacto</a>
+            </li>
+          </ul>
+        </nav>
       </header>
     );
   }
