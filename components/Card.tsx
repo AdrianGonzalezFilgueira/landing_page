@@ -1,18 +1,18 @@
-import Image from "next/image";
-import LinkedinIcon from "./icons/LinkedinIcon";
-import GithubIcon from "./icons/GithubIcon";
-import WebPageIcon from "./icons/WebPageIcon";
 import { Profile } from "../interfaces/Profile";
+import Image from "next/image";
+import GithubIcon from "./icons/GithubIcon";
+import LinkedinIcon from "./icons/LinkedinIcon";
+import WebPageIcon from "./icons/WebPageIcon";
 
 export default function Card({ profile }: { profile: Profile }) {
   return (
     <article className="bg-glass flex flex-col mx-auto p-8">
       <header className="flex justify-center py-8">
         <Image
-          className="rounded-full"
+          className="rounded-lg"
           width="100"
           height="100"
-          src={profile.image}
+          src={profile.image || "https://via.placeholder.com/100"}
           alt="profile"
         />
       </header>
