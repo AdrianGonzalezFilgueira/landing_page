@@ -7,11 +7,11 @@ import WebPageIcon from "./icons/WebPageIcon";
 export default function Card({ profile }: { profile: Profile }) {
   return (
     <article className="bg-glass flex flex-col mx-auto p-8">
-      <header className="flex justify-center py-8">
+      <header className="flex justify-center">
         <Image
           className="rounded-lg"
-          width="100"
-          height="100"
+          width={200}
+          height={200}
           src={profile.image || "https://via.placeholder.com/100"}
           alt="profile"
         />

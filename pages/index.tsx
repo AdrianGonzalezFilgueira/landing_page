@@ -33,14 +33,7 @@ export default function Home() {
         >
           <article className="flex flex-wrap justify-center max-w-md space-x-3 ">
             {profilesData.map((profile) => (
-              <div
-                className={`border-2 ${
-                  profile.id === activeProfile.id
-                    ? "border-green-600"
-                    : "border-transparent"
-                } rounded-lg`}
-                key={profile.id}
-              >
+              <div className={`border rounded-lg`} key={profile.id}>
                 <Avatar
                   profile={profile}
                   onClick={() => setActiveProfile(profile)}
