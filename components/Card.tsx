@@ -6,12 +6,12 @@ import WebPageIcon from "./icons/WebPageIcon";
 
 export default function Card({ profile }: { profile: Profile }) {
   return (
-    <article className="bg-glass flex flex-col mx-auto p-8">
+    <article className="bg-glass flex flex-col p-4 w-72">
       <header className="flex justify-center">
         <Image
           className="rounded-lg"
-          width={200}
-          height={200}
+          width={250}
+          height={250}
           src={profile.image || "https://via.placeholder.com/100"}
           alt="profile"
         />

@@ -19,7 +19,7 @@ export default function Home() {
         <meta name="description" content="Valtua" />
       </Head>
       <NavBar />
-      <main className="container mx-auto py-20">
+      <main className="container mx-auto p-4">
         <SectionTitle>{t("section.about")}</SectionTitle>
         <section id="about"></section>
 
@@ -29,28 +29,27 @@ export default function Home() {
         <SectionTitle>{t("section.team")}</SectionTitle>
         <section
           id="team"
-          className="bg-glass flex flex-wrap items-center justify-around p-10"
+          className="bg-glass flex flex-wrap items-center justify-center p-8 gap-20"
         >
-          <article className="flex flex-wrap justify-center max-w-md space-x-3 ">
+          <article className="flex flex-wrap justify-center max-w-md gap-3">
             {profilesData.map((profile) => (
-              <div className={`border rounded-lg`} key={profile.id}>
-                <Avatar
-                  profile={profile}
-                  onMouseEnter={() => setActiveProfile(profile)}
-                  onLoad={() =>
-                    setActiveProfile(
-                      profilesData[
-                        Math.floor(Math.random() * profilesData.length)
-                      ]
-                    )
-                  }
-                />
-              </div>
+              <Avatar
+                key={profile.id}
+                isActive={profile.id !== activeProfile.id}
+                profile={profile}
+                onClick={() => setActiveProfile(profile)}
+                onLoad={() =>
+                  setActiveProfile(
+                    profilesData[
+                      Math.floor(Math.random() * profilesData.length)
+                    ]
+                  )
+                }
+              />
             ))}
           </article>
-          <article>
-            <Card profile={activeProfile} />
-          </article>
+
+          <Card profile={activeProfile} />
         </section>
 
         <SectionTitle>{t("section.contact")}</SectionTitle>
