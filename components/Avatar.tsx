@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Avatar({ profile, onClick, onLoad }: any) {
+export default function Avatar({ profile, onMouseEnter, onLoad }: any) {
   return (
     <>
       <Image
@@ -10,7 +10,7 @@ export default function Avatar({ profile, onClick, onLoad }: any) {
         src={profile.image || "https://via.placeholder.com/100"}
         alt={profile.name}
         onLoad={onLoad}
-        onClick={onClick}
+        onMouseEnter={onMouseEnter}
       />
     </>
   );

@@ -36,7 +36,7 @@ export default function Home() {
               <div className={`border rounded-lg`} key={profile.id}>
                 <Avatar
                   profile={profile}
-                  onClick={() => setActiveProfile(profile)}
+                  onMouseEnter={() => setActiveProfile(profile)}
                   onLoad={() =>
                     setActiveProfile(
                       profilesData[
