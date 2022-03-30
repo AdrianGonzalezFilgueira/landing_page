@@ -5,7 +5,6 @@ import { useTranslation } from "next-i18next";
 import Avatar from "../components/Avatar";
 import Head from "next/head";
 import NavBar from "../components/NavBar";
-import SectionTitle from "../components/SectionTitle";
 import Card from "../components/Card";
 
 export default function Home() {
@@ -19,14 +18,25 @@ export default function Home() {
         <meta name="description" content="Valtua" />
       </Head>
       <NavBar />
-      <main className="container mx-auto p-4">
-        <SectionTitle>{t("section.about")}</SectionTitle>
-        <section id="about"></section>
+      <main className="p-4">
+        <section id="about">
+          <h2 className="font-bold text-cyan-400 text-xl text-center">
+            {t("section.about")}
+          </h2>
+        </section>
 
-        <SectionTitle>{t("section.projects")}</SectionTitle>
-        <section id="projects"></section>
+        <section id="projects" className="">
+          <div className="flex items-center -skew-x-12">
+            <div className="-ml-6 h-10 w-1/3 bg-white"></div>
+            <h2 className="ml-2 text-4xl font-extrabold uppercase">
+              {t("section.projects")}
+            </h2>
+          </div>
+        </section>
 
-        <SectionTitle>{t("section.team")}</SectionTitle>
+        <h2 className="font-bold text-cyan-400 text-xl text-center">
+          {t("section.team")}
+        </h2>
         <section
           id="team"
           className="bg-glass flex flex-wrap items-center justify-center p-8 gap-20"
@@ -52,8 +62,11 @@ export default function Home() {
           <Card profile={activeProfile} />
         </section>
 
-        <SectionTitle>{t("section.contact")}</SectionTitle>
-        <section id="contact"></section>
+        <section id="contact">
+          <h2 className="font-bold text-cyan-400 text-xl text-center">
+            {t("section.contact")}
+          </h2>
+        </section>
       </main>
     </>
   );
