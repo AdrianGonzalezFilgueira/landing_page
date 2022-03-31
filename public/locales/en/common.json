@@ -1,4 +1,8 @@
 {
   "project.momentum.description": "An application designed to store and organize a collection of pictures",
-  "project.valtua.description": "Organization's website"
+  "project.valtua.description": "Organization's website",
+  "section.about": "About us",
+  "section.projects": "Projects",
+  "section.team": "Team",
+  "section.contact": "Contact"
 }
