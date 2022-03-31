@@ -17,7 +17,7 @@ export default function Home() {
         <meta name="description" content="Valtua" />
       </Head>
       <NavBar />
-      {/*TODO: eliminar flecha cuando ya estemos arriba en el menú 
+      {/*TODO: eliminar flecha cuando ya estemos arriba en el menú
       <ArrowUp />*/}
       <main className="p-4">
         <SectionAbout />
