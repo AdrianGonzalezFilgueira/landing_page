@@ -5,7 +5,7 @@ export default function SectionAbout() {
   return (
     <div className="my-8">
       <div className="flex items-center -skew-x-12">
-        <div className="-ml-6 h-10 w-1/3 bg-slate-200"></div>
+        <div className="-ml-6 h-10 w-1/3 bg-white"></div>
         <h2 className="ml-2 text-4xl font-extrabold uppercase">
           {t("section.about")}
         </h2>

@@ -3,7 +3,7 @@ import { useTranslation } from "next-i18next";
 import Head from "next/head";
 import NavBar from "../components/NavBar";
 import SectionAbout from "../components/SectionAbout";
-import SectionProjects from "../components/SectionProjects";
+import SectionProjects from "../components/Projects/SectionProjects";
 import SectionTeam from "../components/SectionTeam";
 import SectionContact from "../components/SectionContact";
 

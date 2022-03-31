@@ -1,4 +1,4 @@
-import { Project } from "../interfaces/Project";
+import { Project } from "../../interfaces/Project";
 
 export default function ProjectInfo({ project }: { project: Project }) {
   return (
