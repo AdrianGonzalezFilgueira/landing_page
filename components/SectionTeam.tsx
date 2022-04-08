@@ -3,10 +3,12 @@ import { useState } from "react";
 import { profilesData } from "../data/profile";
 import Avatar from "./Avatar";
 import Card from "./Card";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function SectionTeam() {
   const { t } = useTranslation("common");
   const [activeProfile, setActiveProfile]: any = useState({});
+
   return (
     <div className="my-8">
       <div className="flex items-center -skew-x-12">
@@ -39,7 +41,8 @@ export default function SectionTeam() {
             ))}
           </article>
 
-          <Card profile={activeProfile} />
+              <Card profile={activeProfile} />
+          
         </section>
       </div>
     </div>

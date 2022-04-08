@@ -3,18 +3,27 @@ import Image from "next/image";
 import GithubIcon from "./icons/GithubIcon";
 import LinkedinIcon from "./icons/LinkedinIcon";
 import WebPageIcon from "./icons/WebPageIcon";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function Card({ profile }: { profile: Profile }) {
+
   return (
-    <article className="bg-glass flex flex-col p-4 w-72">
+    <article className=" flex flex-col p-4 w-72">
       <header className="flex justify-center">
-        <Image
-          className="rounded-lg"
-          width={250}
-          height={250}
-          src={profile.image || "https://via.placeholder.com/100"}
-          alt="profile"
-        />
+          <AnimatePresence>
+            <motion.img
+              className="rounded-lg"
+              width={250}
+              height={250}
+              key={profile.image}
+              src={profile.image || "https://via.placeholder.com/100"}
+              initial={{ x: 100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ "easeInOut": [0.17, 0.67, 0.83, 0.67]}}
+              exit={{ x: 100, opacity: 0 }}
+              alt="profile"
+            />
+          </AnimatePresence>
       </header>
       <h3 className="font-bold text-cyan-400 text-xl text-center">
         {profile.name}
