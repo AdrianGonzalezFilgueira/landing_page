@@ -10,15 +10,7 @@ export const projectsData: Project[] = [
     image: "https://via.placeholder.com/500x250",
     website: "https://validame.herokuapp.com/",
     github: "https://github.com/Formate-con-Altia/valida.me",
-    technologies: [
-      "Javascript",
-      "NodeJs",
-      "ExpressJs",
-      "MongoDB",
-      "HTML5",
-      "CSS3",
-      "Bootstrap",
-    ],
+    technologies: ["Javascript", "NodeJs", "ExpressJs", "MongoDB", "Bootstrap"],
   },
   {
     id: 2,
