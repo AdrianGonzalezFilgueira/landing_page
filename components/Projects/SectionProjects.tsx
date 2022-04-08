@@ -11,6 +11,21 @@ export default function SectionProjects() {
   const { t } = useTranslation("common");
   const [activeProject, setActiveProject]: any = useState(projectsData[0]);
 
+  const firstProject = activeProject.id - 1 === 0;
+  const lastProject = activeProject.id === projectsData.length;
+
+  const handleSwitchProject = (action: string) => {
+    const index = projectsData.findIndex(
+      (project) => project.id === activeProject.id
+    );
+
+    const projectIndex = action === "NEXT_PROJECT" ? index + 1 : index - 1;
+
+    if (projectsData[projectIndex]) {
+      setActiveProject(projectsData[projectIndex]);
+    }
+  };
+
   return (
     <section id="projects">
       <div className="flex items-center -skew-x-12">
@@ -27,9 +42,16 @@ export default function SectionProjects() {
               <ProjectImage project={activeProject} />
             </div>
             <div className="flex items-center justify-center gap-4">
-              <div>
+              <button
+                onClick={() => handleSwitchProject("PREV_PROJECT")}
+                disabled={firstProject}
+                className={`bg-slate-200 rounded-full p-2 ${
+                  firstProject && "opacity-50"
+                }`}
+              >
                 <ChevronLeft />
-              </div>
+              </button>
+
               <div className="flex gap-8">
                 {projectsData.map((project) => (
                   <Avatar
@@ -42,9 +64,16 @@ export default function SectionProjects() {
                   />
                 ))}
               </div>
-              <div>
+
+              <button
+                onClick={() => handleSwitchProject("NEXT_PROJECT")}
+                disabled={lastProject}
+                className={`bg-slate-200 rounded-full p-2 ${
+                  lastProject && "opacity-50"
+                }`}
+              >
                 <ChevronRight />
-              </div>
+              </button>
             </div>
           </div>
         </article>
