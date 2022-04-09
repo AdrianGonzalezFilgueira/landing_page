@@ -4,20 +4,20 @@ export default function ProjectInfo({ project }: { project: Project }) {
   return (
     <article className="max-w-xl">
       <header className="flex justify-center">
-        <h3 className="font-bold text-cyan-400 text-5xl text-center">
+        <h3 className="text-center text-5xl font-bold text-cyan-400">
           {project.name}
         </h3>
       </header>
       <div>
-        <p className="font-bold text-gray-700 text-lg text-justify break-all">
+        <p className="break-all text-justify text-lg font-bold text-gray-700">
           {project.description}
         </p>
       </div>
 
-      <div className="flex flex-col justify-around xl:flex-row py-10">
+      <div className="flex flex-col justify-around py-10 xl:flex-row">
         <a
           href={project.website}
-          className="bg-gradient-to-r from-[#B845FF] to-[#0029FF] rounded-3xl font-extrabold px-12 py-3 text-center text-xl uppercase w-1/3"
+          className="w-1/3 rounded-3xl bg-gradient-to-r from-[#B845FF] to-[#0029FF] px-12 py-3 text-center text-xl font-extrabold uppercase"
           target="_blank"
           rel="noreferrer"
         >
@@ -25,7 +25,7 @@ export default function ProjectInfo({ project }: { project: Project }) {
         </a>
         <a
           href={project.github}
-          className="bg-gradient-to-r from-[#FFBC57] to-[#A532FF] rounded-3xl font-extrabold px-12 py-3 text-center text-xl uppercase w-1/3"
+          className="w-1/3 rounded-3xl bg-gradient-to-r from-[#FFBC57] to-[#A532FF] px-12 py-3 text-center text-xl font-extrabold uppercase"
           target="_blank"
           rel="noreferrer"
         >
@@ -40,7 +40,7 @@ export default function ProjectInfo({ project }: { project: Project }) {
             className="bg-gradient-to-r from-[#FFBC57] to-[#A532FF] p-1"
           >
             <div className="bg-white">
-              <span className="bg-gradient-to-r from-[#FFBC57] to-[#A532FF] bg-clip-text p-1 text-transparent text-center text-lg uppercase">
+              <span className="bg-gradient-to-r from-[#FFBC57] to-[#A532FF] bg-clip-text p-1 text-center text-lg uppercase text-transparent">
                 {technology}
               </span>
             </div>

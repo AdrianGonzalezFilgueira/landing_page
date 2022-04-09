@@ -6,29 +6,28 @@ import WebPageIcon from "./icons/WebPageIcon";
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function Card({ profile }: { profile: Profile }) {
-
   return (
-    <article className=" flex flex-col p-4 w-72">
+    <article className=" flex w-72 flex-col p-4">
       <header className="flex justify-center">
-          <AnimatePresence>
-            <motion.img
-              className="rounded-lg"
-              width={250}
-              height={250}
-              key={profile.image}
-              src={profile.image || "https://via.placeholder.com/100"}
-              initial={{ x: 100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ "easeInOut": [0.17, 0.67, 0.83, 0.67]}}
-              exit={{ x: 100, opacity: 0 }}
-              alt="profile"
-            />
-          </AnimatePresence>
+        <AnimatePresence>
+          <motion.img
+            className="rounded-lg"
+            width={250}
+            height={250}
+            key={profile.image}
+            src={profile.image || "https://via.placeholder.com/100"}
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ easeInOut: [0.17, 0.67, 0.83, 0.67] }}
+            exit={{ x: 100, opacity: 0 }}
+            alt="profile"
+          />
+        </AnimatePresence>
       </header>
-      <h3 className="font-bold text-cyan-400 text-xl text-center">
+      <h3 className="text-center text-xl font-bold text-cyan-400">
         {profile.name}
       </h3>
-      <h4 className="font-bold text-cyan-400 text-xl text-center">
+      <h4 className="text-center text-xl font-bold text-cyan-400">
         {profile.bio}
       </h4>
       <div className="flex justify-center space-x-4 fill-slate-500 p-2">

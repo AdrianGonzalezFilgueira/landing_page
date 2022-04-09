@@ -1,6 +1,6 @@
 export default function GithubIcon() {
   return (
-    <svg className="w-8 h-8 hover:fill-[#171515]" viewBox="0 0 128 128">
+    <svg className="h-8 w-8 hover:fill-[#171515]" viewBox="0 0 128 128">
       <path
         fillRule="evenodd"
         clipRule="evenodd"

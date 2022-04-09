@@ -16,7 +16,7 @@ export default function Document() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body className="bg-[#151051] text-white overflow-x-hidden">
+      <body className="overflow-x-hidden bg-[#151051] text-white">
         <Main />
         <NextScript />
       </body>

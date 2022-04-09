@@ -10,7 +10,7 @@ export default function Avatar({
 }: any) {
   return (
     <Image
-      className={`rounded-lg ${isActive && "grayscale cursor-pointer"}`}
+      className={`rounded-lg ${isActive && "cursor-pointer grayscale"}`}
       width={width}
       height={height}
       src={profile.image || "https://via.placeholder.com/200"}

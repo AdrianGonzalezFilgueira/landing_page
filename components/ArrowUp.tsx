@@ -1,7 +1,7 @@
 export default function ArrowUp() {
   return (
     <a href="#top">
-      <aside className="bg-glass rounded-full p-2 fixed bottom-5 right-5 z-50">
+      <aside className="bg-glass fixed bottom-5 right-5 z-50 rounded-full p-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-6 w-6"

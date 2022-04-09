@@ -4,8 +4,8 @@ export default function NavBar() {
   const { t } = useTranslation("common");
 
   return (
-    <header id="top" className="mx-auto container">
-      <nav className="flex items-center text-center flex-wrap">
+    <header id="top" className="container mx-auto">
+      <nav className="flex flex-wrap items-center text-center">
         <div className="w-1/5">
           <a href="#about">{t("section.about")}</a>
         </div>

@@ -4,7 +4,7 @@ export default function SectionContact() {
   const { t } = useTranslation("common");
   return (
     <section id="contact">
-      <h2 className="font-bold text-cyan-400 text-xl text-center">
+      <h2 className="text-center text-xl font-bold text-cyan-400">
         {t("section.contact")}
       </h2>
     </section>

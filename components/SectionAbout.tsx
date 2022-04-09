@@ -4,13 +4,13 @@ export default function SectionAbout() {
   const { t } = useTranslation("common");
   return (
     <div className="my-8">
-      <div className="flex items-center -skew-x-12">
+      <div className="flex -skew-x-12 items-center">
         <div className="-ml-6 h-10 w-1/3 bg-white"></div>
         <h2 className="ml-2 text-4xl font-extrabold uppercase">
           {t("section.about")}
         </h2>
       </div>
-      <section id="about" className="bg-glass max-w-6xl mx-auto p-3 my-4">
+      <section id="about" className="bg-glass mx-auto my-4 max-w-6xl p-3">
         <p className="italic">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
           reiciendis nostrum modi repellendus totam inventore incidunt eveniet
