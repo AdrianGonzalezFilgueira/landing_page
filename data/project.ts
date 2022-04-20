@@ -10,7 +10,7 @@ export const projectsData: Project[] = [
     image: "https://via.placeholder.com/500x250",
     website: "https://validame.herokuapp.com/",
     github: "https://github.com/Formate-con-Altia/valida.me",
-    technologies: ["Javascript", "NodeJs", "ExpressJs", "MongoDB", "Bootstrap"],
+    technologies: ["Javascript", "Node.js", "Express.js", "MongoDB", "Bootstrap"],
   },
   {
     id: 2,
@@ -23,13 +23,11 @@ export const projectsData: Project[] = [
     github: "https://github.com/valtua/fototeca-20",
     technologies: [
       "Javascript",
-      "NodeJs",
-      "NextJs",
+      "Node.js",
+      "Next.js",
       "MongoDB",
       "React",
       "Material UI",
-      "HTML5",
-      "CSS3",
     ],
   },
   {
@@ -42,13 +40,11 @@ export const projectsData: Project[] = [
     website: "",
     github: "https://github.com/valtua/landing_page",
     technologies: [
-      "Javascript",
-      "NodeJs",
-      "NextJs",
+      "Node.js",
+      "Next.js",
       "TypeScript",
       "React",
       "Tailwind CSS",
-      "HTML5",
     ],
   },
 ];
