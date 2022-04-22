@@ -10,7 +10,6 @@ import ProjectInfo from "./ProjectInfo";
 export default function SectionProjects() {
   const { t } = useTranslation("common");
   const [activeProject, setActiveProject]: any = useState(projectsData[0]);
-
   const firstProject = activeProject.id - 1 === 0;
   const lastProject = activeProject.id === projectsData.length;
 
@@ -28,16 +27,17 @@ export default function SectionProjects() {
 
   return (
     <section id="projects">
-      <div className="flex -skew-x-12 items-center">
-        <div className="-ml-6 h-10 w-1/3 bg-white"></div>
-        <h2 className="ml-2 text-4xl font-extrabold uppercase">
+      <div className="flex">
+        <div className="-ml-6 h-10 w-1/3 -skew-x-12 bg-white"></div>
+
+        <h2 className="ml-2 text-3xl font-extrabold uppercase">
           {t("section.projects")}
         </h2>
       </div>
 
-      <div className="mt-8 flex justify-between">
-        <article className="width-45 -ml-20 -skew-x-12 bg-white py-8 pl-20">
-          <div className="flex skew-x-12 flex-col justify-center gap-8">
+      <div className="mt-8 flex flex-col justify-between md:flex-row">
+        <article className="md:width-45 w-full bg-white py-8 md:-ml-20 md:-skew-x-12 md:pl-20">
+          <div className="flex flex-col justify-center gap-8 md:skew-x-12">
             <div className="flex justify-center">
               <ProjectImage project={activeProject} />
             </div>
@@ -78,14 +78,14 @@ export default function SectionProjects() {
           </div>
         </article>
 
-        <article className="width-45 -mr-20 -skew-x-12 bg-white py-8 pr-20">
+        <article className="width-45 -mr-20 hidden -skew-x-12 bg-white py-8 pr-20 md:block">
           <div className="flex skew-x-12 flex-wrap justify-center gap-4">
             <ProjectInfo project={activeProject} />
           </div>
         </article>
       </div>
 
-      <div className="my-8 flex -skew-x-12 justify-end">
+      <div className="my-8 hidden -skew-x-12 justify-end md:flex">
         <div className="-mr-6 h-10 w-1/3 bg-white"></div>
       </div>
     </section>

@@ -4,23 +4,21 @@ import GithubIcon from "./icons/GithubIcon";
 import LinkedinIcon from "./icons/LinkedinIcon";
 import WebPageIcon from "./icons/WebPageIcon";
 import { AnimatePresence, motion } from "framer-motion";
+import ChevronLeft from "./icons/ChevronLeft";
+import ChevronRight from "./icons/ChevronRight";
 
 export default function Card({ profile }: { profile: Profile }) {
   return (
     <article className=" flex w-72 flex-col p-4">
       <header className="flex justify-center">
         <AnimatePresence>
-          <motion.img
+          <Image
             className="rounded-lg"
             width={250}
             height={250}
             key={profile.image}
             src={profile.image || "https://via.placeholder.com/100"}
-            initial={{ x: 100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ easeInOut: [0.17, 0.67, 0.83, 0.67] }}
-            exit={{ x: 100, opacity: 0 }}
-            alt="profile"
+            alt={profile.name}
           />
         </AnimatePresence>
       </header>

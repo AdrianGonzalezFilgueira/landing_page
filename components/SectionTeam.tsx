@@ -4,6 +4,8 @@ import { profilesData } from "../data/profile";
 import Avatar from "./Avatar";
 import Card from "./Card";
 import { AnimatePresence, motion } from "framer-motion";
+import ChevronLeft from "./icons/ChevronLeft";
+import ChevronRight from "./icons/ChevronRight";
 
 export default function SectionTeam() {
   const { t } = useTranslation("common");
@@ -11,9 +13,10 @@ export default function SectionTeam() {
 
   return (
     <div className="my-8">
-      <div className="flex -skew-x-12 items-center">
-        <div className="-ml-6 h-10 w-1/3 bg-slate-200"></div>
-        <h2 className="ml-2 text-4xl font-extrabold uppercase">
+      <div className="flex">
+        <div className="-ml-6 h-10 w-1/3 -skew-x-12 bg-white"></div>
+
+        <h2 className="ml-2 text-3xl font-extrabold uppercase">
           {t("section.team")}
         </h2>
       </div>
@@ -21,9 +24,9 @@ export default function SectionTeam() {
       <div className="bg-glass mx-auto my-4 max-w-6xl p-3">
         <section
           id="team"
-          className="flex flex-wrap items-center justify-around gap-6 p-8 lg:gap-0"
+          className="flex flex-wrap items-center justify-around gap-6 p-4 md:p-8 lg:gap-0"
         >
-          <article className="flex max-w-md flex-wrap justify-center gap-3">
+          <article className="hidden max-w-md flex-wrap justify-center gap-3 md:flex">
             {profilesData.map((profile) => (
               <Avatar
                 key={profile.id}
@@ -42,6 +45,19 @@ export default function SectionTeam() {
           </article>
 
           <Card profile={activeProfile} />
+
+          <div className="flex w-full justify-between">
+            <ChevronLeft />
+            {profilesData.map((profile) => (
+              <Avatar
+                key={profile.id}
+                isActive={profile.id !== activeProfile.id}
+                profile={profile}
+                onClick={() => setActiveProfile(profile)}
+              />
+            ))}
+            <ChevronRight />
+          </div>
         </section>
       </div>
     </div>

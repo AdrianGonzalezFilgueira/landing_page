@@ -19,7 +19,7 @@ export default function Home() {
       <NavBar />
       {/*TODO: eliminar flecha cuando ya estemos arriba en el menú
       <ArrowUp />*/}
-      <main className="p-4">
+      <main>
         <SectionAbout />
         <SectionProjects />
         <SectionTeam />
