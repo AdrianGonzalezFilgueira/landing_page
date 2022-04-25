@@ -3,7 +3,6 @@ import Image from "next/image";
 import GithubIcon from "./icons/GithubIcon";
 import LinkedinIcon from "./icons/LinkedinIcon";
 import WebPageIcon from "./icons/WebPageIcon";
-import { AnimatePresence, motion } from "framer-motion";
 import ChevronLeft from "./icons/ChevronLeft";
 import ChevronRight from "./icons/ChevronRight";
 
@@ -11,7 +10,6 @@ export default function Card({ profile }: { profile: Profile }) {
   return (
     <article className=" flex w-72 flex-col p-4">
       <header className="flex justify-center">
-        <AnimatePresence>
           <Image
             className="rounded-lg"
             width={250}
@@ -20,7 +18,6 @@ export default function Card({ profile }: { profile: Profile }) {
             src={profile.image || "https://via.placeholder.com/100"}
             alt={profile.name}
           />
-        </AnimatePresence>
       </header>
       <h3 className="text-center text-xl font-bold text-cyan-400">
         {profile.name}

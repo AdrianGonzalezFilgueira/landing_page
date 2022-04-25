@@ -3,7 +3,6 @@ import { useState } from "react";
 import { profilesData } from "../data/profile";
 import Avatar from "./Avatar";
 import Card from "./Card";
-import { AnimatePresence, motion } from "framer-motion";
 import ChevronLeft from "./icons/ChevronLeft";
 import ChevronRight from "./icons/ChevronRight";
 
