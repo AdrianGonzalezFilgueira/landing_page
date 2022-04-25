@@ -45,7 +45,7 @@ export default function SectionTeam() {
 
           <Card profile={activeProfile} />
 
-          <div className="flex w-full justify-between">
+          <div className="flex w-full items-center justify-between md:hidden">
             <ChevronLeft />
             {profilesData.map((profile) => (
               <Avatar
