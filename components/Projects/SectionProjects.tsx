@@ -9,6 +9,7 @@ import ProjectInfo from "./ProjectInfo";
 
 export default function SectionProjects() {
   const { t } = useTranslation("common");
+  const [showInfo, setShowInfo] = useState(false);
   const [activeProject, setActiveProject]: any = useState(projectsData[0]);
   const firstProject = activeProject.id - 1 === 0;
   const lastProject = activeProject.id === projectsData.length;
@@ -39,7 +40,11 @@ export default function SectionProjects() {
         <article className="md:width-45 w-full bg-white py-8 md:-ml-20 md:-skew-x-12 md:pl-20">
           <div className="flex flex-col justify-center gap-8 md:skew-x-12">
             <div className="flex justify-center">
-              <ProjectImage project={activeProject} />
+              <ProjectImage
+                project={activeProject}
+                showInfo={showInfo}
+                onClick={() => setShowInfo(!showInfo)}
+              />
             </div>
             <div className="flex items-center justify-center gap-4">
               <button
@@ -60,7 +65,10 @@ export default function SectionProjects() {
                     key={project.id}
                     isActive={project.id !== activeProject.id}
                     profile={project}
-                    onClick={() => setActiveProject(project)}
+                    onClick={() => {
+                      setActiveProject(project);
+                      setShowInfo(false);
+                    }}
                   />
                 ))}
               </div>
