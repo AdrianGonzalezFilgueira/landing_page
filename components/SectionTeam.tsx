@@ -11,7 +11,7 @@ export default function SectionTeam() {
   const [activeProfile, setActiveProfile]: any = useState({});
 
   return (
-    <div className="my-8">
+    <div className="my-8 px-3">
       <div className="flex">
         <div className="-ml-6 h-10 w-1/3 -skew-x-12 bg-white"></div>
 
@@ -47,14 +47,16 @@ export default function SectionTeam() {
 
           <div className="flex w-full items-center justify-between md:hidden">
             <ChevronLeft />
-            {profilesData.map((profile) => (
-              <Avatar
-                key={profile.id}
-                isActive={profile.id !== activeProfile.id}
-                profile={profile}
-                onClick={() => setActiveProfile(profile)}
-              />
-            ))}
+            {profilesData
+              .map((profile) => (
+                <Avatar
+                  key={profile.id}
+                  isActive={profile.id !== activeProfile.id}
+                  profile={profile}
+                  onClick={() => setActiveProfile(profile)}
+                />
+              ))
+              .splice(0, 3)}
             <ChevronRight />
           </div>
         </section>

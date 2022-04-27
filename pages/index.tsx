@@ -19,13 +19,13 @@ export default function Home() {
         <meta name="description" content="Valtua" />
       </Head>
 
-      <Canvas>
+      {/* <Canvas>
         <Lava colors={["#c900fc", "#fcb01c"]} />
       </Canvas>
 
       <Canvas>
         <Lava colors={["#0037fc", "#f71cfc"]} />
-      </Canvas>
+      </Canvas> */}
 
       <div className="absolute h-full w-full">
         <NavBar />

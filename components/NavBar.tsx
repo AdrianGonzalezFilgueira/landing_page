@@ -8,41 +8,55 @@ export default function NavBar() {
 
   return (
     <header id="top" className="container mx-auto">
-      <nav className="items-center text-center">
-        <div className="ml-2 mt-2 flex flex-wrap items-center md:hidden">
-          <button
-            className="bg-glass flex justify-center rounded-none p-1"
-            onClick={() => setIsNavOpen(!isNavOpen)}
-          >
-            <MenuIcon />
-          </button>
+      <nav className="">
+        <div className="ml-2 mt-2 flex flex-wrap items-center justify-center md:hidden">
+          <div className="mr-auto">
+            <button
+              className="bg-glass rounded-none p-1"
+              onClick={() => setIsNavOpen(!isNavOpen)}
+            >
+              <MenuIcon />
+            </button>
+          </div>
 
-          <h1 className="ml-2 text-4xl">VALTUA</h1>
+          <div className="mr-auto -ml-8">
+            <h1 className="text-4xl">VALTUA</h1>
+          </div>
         </div>
 
         <div
           className={
-            isNavOpen ? "ml-2 flex flex-col md:flex-row" : "hidden md:flex"
+            isNavOpen
+              ? "ml-2 mt-2 flex flex-col space-y-2 md:flex-row md:space-y-0"
+              : "hidden md:flex"
           }
         >
-          <div className="w-full self-center text-left md:w-1/5 md:text-center">
-            <a href="#about">{t("section.about")}</a>
+          <div className="block w-full self-center text-left md:w-1/5 md:text-center">
+            <a className="text-xl font-bold" href="#about">
+              {t("section.about")}
+            </a>
           </div>
 
-          <div className="w-full self-center text-left md:w-1/5 md:text-center">
-            <a href="#projects">{t("section.projects")}</a>
+          <div className="block w-full self-center text-left md:w-1/5 md:text-center">
+            <a className="text-xl font-bold" href="#projects">
+              {t("section.projects")}
+            </a>
           </div>
 
           <div className="hidden w-full self-center text-left md:block md:w-1/5 md:text-center">
             <h1 className="text-4xl">VALTUA</h1>
           </div>
 
-          <div className="w-full self-center text-left md:w-1/5 md:text-center">
-            <a href="#team">{t("section.team")}</a>
+          <div className="block w-full self-center text-left md:w-1/5 md:text-center">
+            <a className="text-xl font-bold" href="#team">
+              {t("section.team")}
+            </a>
           </div>
 
-          <div className="w-full self-center text-left md:w-1/5 md:text-center">
-            <a href="#contact">{t("section.contact")}</a>
+          <div className="block w-full self-center text-left md:w-1/5 md:text-center">
+            <a className="text-xl font-bold" href="#contact">
+              {t("section.contact")}
+            </a>
           </div>
         </div>
       </nav>

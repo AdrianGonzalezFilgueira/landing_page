@@ -37,9 +37,9 @@ export default function SectionProjects() {
       </div>
 
       <div className="mt-8 flex flex-col justify-between md:flex-row">
-        <article className="md:width-45 w-full bg-white py-8 md:-ml-20 md:-skew-x-12 md:pl-20">
+        <article className="md:width-45 w-full bg-white px-3 py-8 md:-ml-20 md:-skew-x-12 md:pl-20">
           <div className="flex flex-col justify-center gap-8 md:skew-x-12">
-            <div className="flex justify-center">
+            <div className="block justify-center md:flex">
               <ProjectImage
                 project={activeProject}
                 showInfo={showInfo}

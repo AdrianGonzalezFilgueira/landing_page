@@ -2,7 +2,7 @@ import { Project } from "../../interfaces/Project";
 
 export default function ProjectInfo({ project }: { project: Project }) {
   return (
-    <article className="max-w-xl">
+    <article className="md:max-w-xl">
       <header className="flex justify-center">
         <h3 className="text-center text-5xl font-bold text-cyan-400">
           {project.name}
