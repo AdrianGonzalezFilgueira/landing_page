@@ -22,7 +22,7 @@ export const profilesData: Profile[] = [
   {
     id: 3,
     name: "Ángel Amado",
-    bio: "Hola me llamo Ángel",
+    bio: "Full Stack Java Developer",
     image: "https://avatars.githubusercontent.com/u/93152011?v=4",
     website: "",
     linkedin: "angel-amado",
