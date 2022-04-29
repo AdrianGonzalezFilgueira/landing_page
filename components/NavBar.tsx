@@ -10,9 +10,9 @@ export default function NavBar() {
 
   useEffect(() => {
     if (isNavOpen) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflowY = "hidden";
     } else {
-      document.body.style.overflow = "auto";
+      document.body.style.overflowY = "auto";
     }
   }, [isNavOpen]);
 
@@ -37,61 +37,59 @@ export default function NavBar() {
         <div
           className={
             isNavOpen
-              ? "fixed inset-0 z-10 flex flex-col bg-white"
+              ? "fixed inset-0 z-10 flex flex-col items-center gap-10 bg-white pt-16"
               : "hidden md:flex"
           }
         >
           <div
-            className="flex flex-col items-end px-8 py-8 text-[#151051]"
+            className="px-8 py-8 text-[#151051]"
             onClick={() => setIsNavOpen(false)}
           >
             <CloseMenuIcon />
           </div>
 
-          <div className="flex flex-col items-center gap-10 pt-16">
-            <div className="md:hidden md:w-1/5 md:text-center">
-              <ValtuaLogo />
-            </div>
+          <div className="md:hidden md:w-1/5 md:text-center">
+            <ValtuaLogo />
+          </div>
 
-            <div
-              className="text-[#151051] md:w-1/5 md:text-center md:text-white"
-              onClick={() => setIsNavOpen(false)}
-            >
-              <a className="text-xl font-bold" href="#about">
-                {t("section.about")}
-              </a>
-            </div>
+          <div
+            className="self-center text-[#151051] md:w-1/5 md:text-center md:text-white"
+            onClick={() => setIsNavOpen(false)}
+          >
+            <a className="text-xl font-bold" href="#about">
+              {t("section.about")}
+            </a>
+          </div>
 
-            <div
-              className="text-[#151051] md:w-1/5 md:text-center md:text-white"
-              onClick={() => setIsNavOpen(false)}
-            >
-              <a className="text-xl font-bold" href="#projects">
-                {t("section.projects")}
-              </a>
-            </div>
+          <div
+            className="self-center text-[#151051] md:w-1/5 md:text-center md:text-white"
+            onClick={() => setIsNavOpen(false)}
+          >
+            <a className="text-xl font-bold" href="#projects">
+              {t("section.projects")}
+            </a>
+          </div>
 
-            <div className="hidden w-full self-center text-left md:block md:w-1/5 md:text-center">
-              <h1 className="text-4xl">VALTUA</h1>
-            </div>
+          <div className="hidden w-full self-center text-left md:block md:w-1/5 md:text-center">
+            <h1 className="text-4xl">VALTUA</h1>
+          </div>
 
-            <div
-              className="text-[#151051] md:w-1/5 md:text-center md:text-white"
-              onClick={() => setIsNavOpen(false)}
-            >
-              <a className="text-xl font-bold" href="#team">
-                {t("section.team")}
-              </a>
-            </div>
+          <div
+            className="self-center text-[#151051] md:w-1/5 md:text-center md:text-white"
+            onClick={() => setIsNavOpen(false)}
+          >
+            <a className="text-xl font-bold" href="#team">
+              {t("section.team")}
+            </a>
+          </div>
 
-            <div
-              className="text-[#151051] md:w-1/5 md:text-center md:text-white"
-              onClick={() => setIsNavOpen(false)}
-            >
-              <a className="text-xl font-bold" href="#contact">
-                {t("section.contact")}
-              </a>
-            </div>
+          <div
+            className="self-center text-[#151051] md:w-1/5 md:text-center md:text-white"
+            onClick={() => setIsNavOpen(false)}
+          >
+            <a className="text-xl font-bold" href="#contact">
+              {t("section.contact")}
+            </a>
           </div>
         </div>
       </nav>

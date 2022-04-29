@@ -14,18 +14,19 @@ export default function ProjectInfo({ project }: { project: Project }) {
         </p>
       </div>
 
-      <div className="flex flex-col justify-around py-10 xl:flex-row">
+      <div className="flex justify-around py-10 xl:flex-row">
         <a
           href={project.website}
-          className="w-1/3 rounded-3xl bg-gradient-to-r from-[#B845FF] to-[#0029FF] px-12 py-3 text-center text-xl font-extrabold uppercase"
+          className="flex items-center rounded-3xl bg-gradient-to-r from-[#B845FF] to-[#0029FF] px-12 py-3 text-center text-xl font-extrabold uppercase"
           target="_blank"
           rel="noreferrer"
         >
           Live Demo
         </a>
+        
         <a
           href={project.github}
-          className="w-1/3 rounded-3xl bg-gradient-to-r from-[#FFBC57] to-[#A532FF] px-12 py-3 text-center text-xl font-extrabold uppercase"
+          className="flex items-center rounded-3xl bg-gradient-to-r from-[#FFBC57] to-[#A532FF] px-12 py-3 text-center text-xl font-extrabold uppercase"
           target="_blank"
           rel="noreferrer"
         >

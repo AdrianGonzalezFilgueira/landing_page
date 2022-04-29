@@ -14,8 +14,11 @@ export default function ProjectImage({
   return showInfo ? (
     <div className="px-3 text-black ">
       <button onClick={onClick}>Volver atrás</button>
+
       <h2 className="text-xl font-bold">{project.name}</h2>
+
       <p className="break-all">{project.description}</p>
+
       <div className="my-3 flex flex-wrap justify-center gap-2">
         {project.technologies.map((tech, i) => (
           <div
@@ -29,6 +32,26 @@ export default function ProjectImage({
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="flex flex-wrap gap-3 justify-around py-5 xl:flex-row">
+        <a
+          href={project.website}
+          className="flex justify-center items-center rounded-3xl bg-gradient-to-r from-[#B845FF] to-[#0029FF] px-5 w-48 py-3 text-center text-xl font-extrabold uppercase"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Live Demo
+        </a>
+        
+        <a
+          href={project.github}
+          className="flex justify-center items-center rounded-3xl bg-gradient-to-r from-[#FFBC57] to-[#A532FF] px-5 w-48 py-3 text-center text-xl font-extrabold uppercase"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>
       </div>
     </div>
   ) : (
