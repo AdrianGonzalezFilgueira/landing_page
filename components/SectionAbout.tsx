@@ -13,14 +13,17 @@ export default function SectionAbout() {
         </h2>
       </div>
 
-      <section id="about" className="bg-glass mx-auto my-4 max-w-6xl p-3">
-        <p className="break-all italic">
+      <section
+        id="about"
+        className="bg-glass mx-auto my-4 flex max-w-6xl flex-col gap-5 break-words p-3 italic"
+      >
+        <p>
           Valtua está formado por un grupo de desarrolladores, cuyo objetivo es
           aportar soluciones tecnológicas que permitan mejorar la calidad de
           vida de nuestros usuarios.
         </p>
-        <br />
-        <p className="break-all italic">
+
+        <p>
           Desde hace muchos años, las aplicaciones informáticas se han
           convertido en un elemento clave para mejorar la productividad y
           eficiencia en las empresas. La capacidad de automatizar tareas
@@ -28,16 +31,16 @@ export default function SectionAbout() {
           algunas aplicaciones, han permitido a algunas empresas convertirse en
           compañías líderes de su sector.
         </p>
-        <br />
-        <p className="break-all italic">
+
+        <p>
           Sin embargo, en Valtua pensamos que esos beneficios también pueden ser
           trasladados a cualquier otro ámbito social o personal. Conscientes de
           esas necesidades, y apasionados con las posibilidades que la
           programación puede ofrecer a un grupo de desarrolladores
           comprometidos, nace Valtua.
         </p>
-        <br />
-        <p className="break-all italic">
+
+        <p>
           Nuestras aplicaciones se han convertido en eficientes instrumentos
           tecnológicos al servicio de las necesidades de nuestros usuarios.
         </p>

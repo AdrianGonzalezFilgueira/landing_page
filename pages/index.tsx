@@ -8,6 +8,7 @@ import SectionProjects from "../components/Projects/SectionProjects";
 import SectionTeam from "../components/SectionTeam";
 import SectionContact from "../components/SectionContact";
 import Lava from "../components/Lava";
+import SectionFooter from "../components/SectionFooter";
 
 export default function Home() {
   const { t } = useTranslation("common");
@@ -36,6 +37,7 @@ export default function Home() {
           <SectionProjects />
           <SectionTeam />
           <SectionContact />
+          <SectionFooter />
         </main>
       </div>
     </>

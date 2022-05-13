@@ -11,8 +11,8 @@ export default function SectionContact() {
           {t("section.contact")}
         </h2>
       </div>
-      <div className="m-auto flex w-3/4 flex-col items-center gap-5 py-4">
-        <div className="flex w-full flex-col gap-5 md:flex-row">
+      <div className="m-auto flex w-3/4 flex-col items-center gap-5 py-10">
+        <div className="flex w-full lg:w-3/4 flex-col gap-5 md:flex-row">
           <input
             className="w-full font-bold text-[#151051]"
             type="text"
@@ -25,7 +25,7 @@ export default function SectionContact() {
           />
         </div>
         <textarea
-          className="w-full font-bold text-[#151051]"
+          className="w-full font-bold lg:w-3/4 text-[#151051]"
           placeholder="Escriba su comentario..."
         />
         <a
