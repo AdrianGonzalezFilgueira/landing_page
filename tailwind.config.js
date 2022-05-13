@@ -9,5 +9,5 @@ module.exports = {
     extend: {},
     fontFamily: { sans: ["Inconsolata", ...defaultTheme.fontFamily.sans] },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };
