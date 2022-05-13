@@ -11,17 +11,26 @@ export default function SectionContact() {
           {t("section.contact")}
         </h2>
       </div>
-      <div className="m-auto flex w-3/4 flex-col gap-5 py-5">
-        <div className="flex gap-5 ">
-          <input className="w-full" type="text" placeholder="Nombre" />
-          <input className="w-full" type="email" placeholder="email" />
+      <div className="m-auto flex w-3/4 flex-col items-center gap-5 py-4">
+        <div className="flex w-full flex-col gap-5 md:flex-row">
+          <input
+            className="w-full font-bold text-[#151051]"
+            type="text"
+            placeholder="Nombre"
+          />
+          <input
+            className="w-full font-bold text-[#151051]"
+            type="email"
+            placeholder="Email"
+          />
         </div>
-        <textarea className="flex" placeholder="Escriba su comentario...." />
+        <textarea
+          className="w-full font-bold text-[#151051]"
+          placeholder="Escriba su comentario..."
+        />
         <a
           href="#"
-          className="text-l w-1/3 rounded-3xl bg-white py-1 text-center font-extrabold uppercase text-[#151051]"
-          target="_blank"
-          rel="noreferrer"
+          className="text-l w-32 rounded-3xl bg-white py-1 text-center font-extrabold uppercase text-[#151051]"
         >
           Enviar
         </a>
